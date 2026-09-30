@@ -1,0 +1,38 @@
+.scroll-progress {
+    background:var(--black);
+    height:2px;
+    left:0;
+    position:fixed;
+    top:0;
+    transform:scaleX(0);
+    transform-origin:left;
+    width:100%;
+    z-index:110
+}
+.reveal {
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .8s,transform .8s cubic-bezier(.22,1,.36,1)
+}
+.reveal.visible {
+    opacity:1;
+    transform:translateY(0)
+}
+@keyframes marquee {
+    from {
+        transform:translateX(0)
+    }
+    to {
+        transform:translateX(-50%)
+    }
+}
+@keyframes pulse {
+    0%,100% {
+        opacity:0;
+        transform:scale(.8)
+    }
+    50% {
+        opacity:.4;
+        transform:scale(1.25)
+    }
+}

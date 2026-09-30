@@ -1,0 +1,66 @@
+/* ============================================================
+   BASE STYLES
+   Local typography is provided by fonts.css.
+   Body text uses --sans (Inter 18pt).
+   Headings use --heading-sans (Inter 24pt).
+   ============================================================ */
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+button,input,textarea,select {
+    font:inherit
+}
+html {
+    scroll-behavior:smooth;
+    scroll-padding-top:90px
+}
+body {
+    background:var(--white);
+    color:var(--black);
+    font-family:var(--sans);
+    line-height:1.5;
+    overflow-x:hidden
+}
+body.menu-open {
+    overflow:hidden
+}
+a {
+    color:inherit;
+    text-decoration:none
+}
+::selection {
+    background:var(--black);
+    color:var(--white)
+}
+.section {
+    margin:0 auto;
+    max-width:var(--max-width);
+    padding:150px 5vw
+}
+.eyebrow {
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:.13em;
+    line-height:1.4;
+    margin-bottom:26px;
+    text-transform:uppercase
+}
+.eyebrow span {
+    color:var(--gray-400);
+    margin:0 5px
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:var(--heading-sans)
+}
+h2 {
+    font-size:clamp(3rem,6vw,6.4rem);
+    font-weight:600;
+    letter-spacing:-.07em;
+    line-height:.92
+}
+h2 em {
+    font-family:var(--serif);
+    font-weight:400
+}

@@ -1,0 +1,22 @@
+/* ============================================================
+   GLOBAL DESIGN VARIABLES
+   ============================================================ */
+:root {
+    --black: #0a0a0a;
+    --white: #f7f7f5;
+    --gray-100: #ededeb;
+    --gray-200: #d8d8d4;
+    --gray-400: #92928e;
+    --gray-600: #5d5d59;
+    --line: rgba(10, 10, 10, 0.16);
+
+    --max-width: 1240px;
+
+    /* Local Inter fonts loaded from assets/fonts/ */
+    --sans: "Inter 18pt", Arial, sans-serif;
+    --heading-sans: "Inter 24pt", Arial, sans-serif;
+
+    /* No DM Mono file is present in the project, so use a system monospace fallback. */
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    --serif: Georgia, "Times New Roman", serif;
+}

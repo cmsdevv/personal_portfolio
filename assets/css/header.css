@@ -1,0 +1,90 @@
+.site-header {
+    align-items:center;
+    background:rgba(247,247,245,.9);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    height:76px;
+    justify-content:space-between;
+    left:0;
+    padding:0 5vw;
+    position:fixed;
+    right:0;
+    top:0;
+    z-index:100;
+    backdrop-filter:blur(16px)
+}
+.brand {
+    align-items:center;
+    display:flex;
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:500;
+    gap:12px;
+    letter-spacing:.06em
+}
+.brand-mark {
+    align-items:center;
+    border:1px solid var(--black);
+    display:inline-flex;
+    height:30px;
+    justify-content:center;
+    width:30px
+}
+.nav {
+    align-items:center;
+    display:flex;
+    gap:34px
+}
+.nav a {
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.08em;
+    position:relative;
+    text-transform:uppercase
+}
+.nav a:after {
+    background:var(--black);
+    bottom:-5px;
+    content:"";
+    height:1px;
+    left:0;
+    position:absolute;
+    transform:scaleX(0);
+    transform-origin:right;
+    transition:transform .3s;
+    width:100%
+}
+.nav a:hover:after {
+    transform:scaleX(1);
+    transform-origin:left
+}
+.menu-toggle {
+    background:none;
+    border:0;
+    cursor:pointer;
+    display:none;
+    height:34px;
+    position:relative;
+    width:34px
+}
+.menu-toggle span {
+    background:var(--black);
+    display:block;
+    height:1px;
+    left:6px;
+    position:absolute;
+    transition:transform .25s;
+    width:22px
+}
+.menu-toggle span:first-child {
+    top:13px
+}
+.menu-toggle span:last-child {
+    top:20px
+}
+.menu-toggle.active span:first-child {
+    transform:translateY(3.5px) rotate(45deg)
+}
+.menu-toggle.active span:last-child {
+    transform:translateY(-3.5px) rotate(-45deg)
+}

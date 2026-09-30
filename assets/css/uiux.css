@@ -1,0 +1,110 @@
+.uiux-grid {
+    display:grid;
+    gap:24px;
+    grid-template-columns:repeat(2,minmax(0,1fr))
+}
+.uiux-card {
+    border:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    overflow:hidden;
+    transition:border-color .4s,transform .4s
+}
+.uiux-card:hover {
+    border-color:var(--black);
+    transform:translateY(-6px)
+}
+.uiux-image {
+    background:var(--gray-100);
+    border-bottom:1px solid var(--line);
+    height:330px;
+    overflow:hidden;
+    position:relative
+}
+.uiux-image img {
+    display:block;
+    height:100%;
+    object-fit:contain;
+    width:100%
+}
+.uiux-image > span {
+    background:rgba(255,255,255,.9);
+    bottom:0;
+    font-family:var(--mono);
+    font-size:8px;
+    left:0;
+    letter-spacing:.1em;
+    padding:8px 12px;
+    position:absolute
+}
+.uiux-placeholder {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    inset:0;
+    justify-content:center;
+    pointer-events:none;
+    position:absolute;
+    text-align:center
+}
+.uiux-placeholder strong {
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.13em
+}
+.uiux-placeholder small {
+    color:var(--gray-400);
+    font-family:var(--mono);
+    font-size:8px;
+    line-height:1.6;
+    margin-top:12px;
+    text-transform:uppercase
+}
+.uiux-image.has-image .uiux-placeholder {
+    display:none
+}
+.uiux-info {
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:30px
+}
+.uiux-info h3 {
+    font-size:clamp(1.4rem,2.2vw,2.1rem);
+    font-weight:600;
+    letter-spacing:-.04em;
+    line-height:1.05
+}
+.uiux-info p:not(.project-number) {
+    color:var(--gray-600);
+    font-size:13px;
+    line-height:1.75;
+    margin-top:16px;
+    max-width:560px
+}
+.uiux-meta {
+    align-items:center;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    margin-top:42px;
+    padding-top:18px
+}
+.uiux-meta > span {
+    color:var(--gray-600);
+    font-family:var(--mono);
+    font-size:8px;
+    letter-spacing:.08em
+}
+.uiux-meta .text-link {
+    font-family:var(--mono);
+    font-size:9px;
+    letter-spacing:.05em;
+    text-transform:uppercase
+}
+@media (max-width:800px) {
+    .uiux-grid {grid-template-columns:1fr}
+    .uiux-image {height:300px}
+}
